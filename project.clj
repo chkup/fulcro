@@ -5,8 +5,7 @@
   :license {:name "MIT"
             :url  "https://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.9.0" :scope "provided"]
-                 [org.clojure/clojurescript "1.10.439" :scope "provided"]
-
+                 [org.clojure/clojurescript ~(or (System/getenv "CANARY_CLOJURESCRIPT_VERSION") "1.10.439") :scope "provided"]
                  [cljsjs/react "16.6.0-0"]
                  [cljsjs/react-dom "16.6.0-0"]
                  [cljsjs/react-dom-server "16.6.0-0"]
